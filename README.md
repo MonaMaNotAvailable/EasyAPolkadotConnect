@@ -1,0 +1,2 @@
+# EasyAPolkadotConnect
+Weekend Hackathone
