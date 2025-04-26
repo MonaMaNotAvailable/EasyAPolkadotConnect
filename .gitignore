@@ -1,0 +1,37 @@
+# Virtual Environment
+myenv/
+venv/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local development settings
+.env
+.venv
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# DB where wallet info is stored
+coffeechat.db

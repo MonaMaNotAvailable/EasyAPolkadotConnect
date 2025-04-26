@@ -35,3 +35,45 @@ The core connection fee is refunded upon mutual agreement, incentivizing genuine
   Enable recruiters to post roles and invite candidates for coffee chats.
 - **Reputation System**:  
   Build trust through endorsements and chat feedback.
+
+# 🚀 Project Setup Guide
+
+## 📋 Requirements
+
+### 🦀 Install Rust on macOS
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sudo sh
+# source the changes
+source "$HOME/.cargo/env"
+# Verify installation
+rustc --version  
+```
+
+### 🔧 Setting Up the Backend
+
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+
+2. Create and activate a virtual environment:
+   ```bash
+   python3 -m venv myenv
+   source myenv/bin/activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Start the development server:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+
+## 🔍 Troubleshooting
+
+If you encounter permission issues during installation:
+- For Rust: Make sure to run the installer with sudo
+- For Python packages: Fix pip cache permissions with `sudo chown -R username:staff ~/Library/Caches/pip`
