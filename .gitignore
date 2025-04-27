@@ -35,3 +35,7 @@ htmlcov/
 
 # DB where wallet info is stored
 coffeechat.db
+
+# Frontend
+frontend/package-lock.json
+frontend/node_modules/
