@@ -1,17 +1,20 @@
 from fastapi import FastAPI
 from app.routes import router
-from app.db.database import create_tables
+from app.db.database import Base, engine
 
 app = FastAPI(title="EasyAPolkadotCoffeeChat Backend")
 
+# include your API routes
 app.include_router(router)
 
-# create tables when server starts
+# create all tables when server starts
 @app.on_event("startup")
 async def startup_event():
-    create_tables()
+    # import models so they are registered properly
+    from app import models
+    Base.metadata.create_all(bind=engine)
 
-# Define a root endpoint to handle requests to '/'
+# root endpoint
 @app.get("/")
 def read_root():
     return {"message": "Welcome to EasyAPolkadotCoffeeChat!"}

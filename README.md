@@ -4,7 +4,7 @@ A Web3-powered platform for genuine, meaningful networking
 
 ## 🚀 Use Case
 
-**EasyAPolkadotCoffeeChat** is a decentralized networking platform designed to facilitate authentic peer-to-peer coffee chats. Built on Polkadot, it uses micro-payments to create small commitments, ensuring more respectful and serious interactions without the friction of traditional centralized platforms.
+**EasyAPolkadotCoffeeChat** is a decentralized networking platform designed to facilitate authentic peer-to-peer coffee chats. Built on Polkadot, it uses a unique betting system for time slots, ensuring more respectful and serious interactions without the friction of traditional centralized platforms.
 
 ## 🎯 Mission
 
@@ -16,14 +16,15 @@ Humans meeting humans — for mentorship, learning, career growth, collaboration
 |:-------------------------|:------------|
 | **Profile Registration** | Create a wallet-based profile including name, short bio, and interests. |
 | **Browse Users**          | Discover others interested in coffee chats based on shared interests. |
-| **Request Coffee Chat**   | Initiate a coffee chat by paying a small crypto fee (e.g., 0.01 DOT === 0.04 usd). |
-| **Accept Coffee Chat**    | If the other user accepts, the original fee is refunded to the requester. |
+| **Post Time Slot**        | Users can post available time slots for coffee chats and set a maximum bet for each slot.
+| **Place a Bet**           | Users can place a bet on a time slot to increase their chances of winning the chat. The highest bet wins the time slot. (first come first serve). |
+| **Bet Refund**            | Users who place lower bets than the highest bidder will receive a refund. |
+| **Funds Allocation**      | The person who posted the time slot decides how the funds are allocated (e.g., refund to winner, use for coffee, etc.) |
 | **Secure Interaction**    | All interactions are peer-to-peer; no unnecessary data stored. |
 
 ## 💸 Monetization Model
 
 A **small platform transaction fee** is applied to each coffee chat interaction to sustain the service.  
-The core connection fee is refunded upon mutual agreement, incentivizing genuine conversations.
 
 ## 🔮 Future Work
 
@@ -71,6 +72,17 @@ rustc --version
    ```bash
    uvicorn app.main:app --reload
    ```
+
+5. Expected output for server startup
+  ```
+  INFO:     Will watch for changes in these directories: ['/Users/xxx/Desktop/EasyAPolkadotConnect/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [35292] using StatReload
+INFO:     Started server process [35294]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:60198 - "GET / HTTP/1.1" 200 OK
+  ```
 
 ## 🔍 Troubleshooting
 

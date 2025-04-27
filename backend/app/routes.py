@@ -1,8 +1,15 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
 from app.models import User, CoffeeChatRequest
+from app import crud, models
+from app.db.database import get_db
 from app.services import user_service, polkadot_service
 
 router = APIRouter()
+
+# ----------------------------------
+# User-related routes
+# ----------------------------------
 
 @router.post("/register")
 def register_user(user: User):
@@ -31,3 +38,22 @@ def accept_chat(request: CoffeeChatRequest):
     )
     user_service.accept_chat_request(request)
     return {"message": "Chat accepted and refunded", "tx_hash": tx_hash}
+
+# ----------------------------------
+# TimeSlot and Bet
+# ----------------------------------
+
+# Create a time slot for betting
+@router.post("/time-slot/")
+def create_time_slot(slot_data: models.TimeSlotCreate, db: Session = Depends(get_db)):
+    return crud.create_time_slot(db, slot_data)
+
+# Place a bet on a specific time slot
+@router.post("/time-slot/{time_slot_id}/bet")
+def place_bet(time_slot_id: int, bet_data: models.BetCreate, db: Session = Depends(get_db)):
+    return crud.place_bet(db, time_slot_id, bet_data)
+
+# Close the time slot and pick winner
+@router.post("/time-slot/{time_slot_id}/close")
+def close_time_slot(time_slot_id: int, db: Session = Depends(get_db)):
+    return crud.close_time_slot(db, time_slot_id)
