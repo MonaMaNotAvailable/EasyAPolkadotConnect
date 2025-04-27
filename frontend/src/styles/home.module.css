@@ -1,0 +1,63 @@
+.hero {
+    flex: 1;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(155, 89, 182, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(52, 152, 219, 0.1) 0%, transparent 40%),
+      #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .heroContent {
+    max-width: 800px;
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .titleBrand {
+    color: #9b59b6;
+    font-weight: 700;
+  }
+  
+  .titleDivider {
+    color: rgba(255, 255, 255, 0.2);
+    margin: 0 1rem;
+  }
+  
+  .titleApp {
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+  
+  .ctaButton {
+    background: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
+  }

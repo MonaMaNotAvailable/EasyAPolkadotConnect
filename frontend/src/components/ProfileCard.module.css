@@ -1,0 +1,87 @@
+.card {
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(155, 89, 182, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(52, 152, 219, 0.1) 0%, transparent 40%),
+      #1e1e1e; /* Dark background for consistency */
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: rgba(255, 255, 255, 0.9); /* Light text for readability */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(155, 89, 182, 0.4);
+  }
+  
+  .name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9b59b6; /* Reusing the purple color */
+    margin-bottom: 0.5rem;
+  }
+  
+  .bio {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8); /* Subtle white for bio text */
+    margin-bottom: 1rem;
+  }
+  
+  .interests {
+    margin-top: 1.5rem;
+  }
+  
+  .interestsTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3498db; /* Reusing the blue color */
+    margin-bottom: 0.5rem;
+  }
+  
+  .interestItem {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7); /* Subtle white for interest items */
+    margin-bottom: 0.3rem;
+  }
+  
+  .walletAddress {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6); /* Subtle white for wallet address */
+    margin-top: 1.5rem;
+    word-break: break-word; /* Ensure long wallet addresses wrap properly */
+  }
+
+  .interestsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow tags to wrap to the next line */
+    gap: 0.5rem; /* Add spacing between tags */
+    margin-top: 1rem;
+    justify-content: center; /* Center the tags */
+  }
+  
+  .interestTag {
+    background: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(155, 89, 182, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .interestTag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(155, 89, 182, 0.4);
+  }
+
+  .profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+  }

@@ -1,0 +1,71 @@
+.card {
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(155, 89, 182, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(52, 152, 219, 0.1) 0%, transparent 40%),
+      #1e1e1e; /* Dark background for consistency */
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(155, 89, 182, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: rgba(255, 255, 255, 0.9); /* Light text for readability */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(155, 89, 182, 0.4);
+  }
+  
+  .slotTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #9b59b6; /* Reusing the purple color */
+    margin-bottom: 0.5rem;
+  }
+  
+  .slotDetails {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8); /* Subtle white for details */
+    margin-bottom: 1rem;
+  }
+  
+  .betContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .betInput {
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #2c2c2c; /* Dark input background */
+    color: white;
+    width: 120px;
+    text-align: center;
+  }
+  
+  .betInput::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Subtle placeholder color */
+  }
+  
+  .submitButton {
+    background: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
+  }
+  
+  .submitButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
+  }
