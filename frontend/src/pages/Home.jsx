@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import styles from '../styles/home.module.css';
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
+  const handleNavigate = () => {
+    navigate('/browse'); // Navigate to the Browse tab
+  };
+
   return (
     <main className={styles.hero}>
       <div className={styles.heroContent}>
@@ -13,7 +20,7 @@ const Home = () => {
         <p className={styles.subtitle}>
           Find mentors, network, and grow your career over a virtual coffee ☕
         </p>
-        <button className={styles.ctaButton}>
+        <button className={styles.ctaButton} onClick={handleNavigate}>
           Start Browsing →
         </button>
       </div>
